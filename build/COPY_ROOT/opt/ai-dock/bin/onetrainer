@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(cd /opt/OneTrainer && micromamba -n onetrainer run python scripts/train_ui.py "$@")

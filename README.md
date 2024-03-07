@@ -20,21 +20,37 @@ OneTrainer is described as a one-stop solution for all your stable diffusion tra
 Some features:
 
 **Supported models**: Stable Diffusion 1.5, 2.0, 2.1, SDXL, Würstchen-v2, Stable Cascade, PixArt-Alpha and inpainting models
+
 **Model formats**: diffusers and ckpt models
+
 **Training methods**: Full fine-tuning, LoRA, embeddings
+
 **Masked Training**: Let the training focus on just certain parts of the samples.
+
 **Automatic backups**: Fully back up your training progress regularly during training. This includes all information to seamlessly continue training.
+
 **Image augmentation**: Apply random transforms such as rotation, brightness, contrast or saturation to each image sample to quickly create a more diverse dataset.
+
 **Tensorboard**: A simple tensorboard integration to track the training progress.
+
 **Multiple prompts per image**: Train the model on multiple different prompts per image sample.
+
 **Noise Scheduler Rescaling:** From the paper Common Diffusion Noise Schedules and Sample Steps are Flawed
+
 **EMA**: Train you own EMA model. Optionally keep EMA weights in CPU memory to reduce VRAM usage.
+
 **Aspect Ratio Bucketing**: Automatically train on multiple aspect ratios at a time. Just select the target resolutions, buckets are created automatically.
+
 **Multi Resolution Training**: Train multiple resolutions at the same time.
+
 **Dataset Tooling**: Automatically caption your dataset using BLIP, BLIP2 and WD-1.4, or create masks for masked training using ClipSeg or Rembg.
+
 **Model Tooling**: Convert between different model formats from a simple UI.
+
 **Sampling UI**: Sample the model during training without switching to a different application.
+
 **AlignProp**: A Reinforcement Learning method for diffusion networks from the paper
+
 
 ## Pre-built Images
 
@@ -58,9 +74,9 @@ Tags follow these patterns:
 ##### _CUDA_
 - `:pytorch-[pytorch-version]-py[python-version]-cuda-[x.x.x]-base-[ubuntu-version]`
 
-- `:latest-cuda` &rarr; `:pytorch-2.2.0-py3.10-cuda-11.8.0-base-22.04`
+- `:latest-cuda` &rarr; `:pytorch-2.1.2-py3.10-cuda-11.8.0-base-22.04`
 
-- `:latest-cuda-jupyter` &rarr; `:jupyter-pytorch-2.2.0-py3.10-cuda-11.8.0-base-22.04`
+- `:latest-cuda-jupyter` &rarr; `:jupyter-pytorch-2.1.2-py3.10-cuda-11.8.0-base-22.04`
 
 Browse [here](https://github.com/ai-dock/onetrainer/pkgs/container/onetrainer) for an image suitable for your target environment.
 
@@ -68,7 +84,7 @@ You can also [build from source](#building-images) by editing `.env` and running
 
 Supported Python versions: `3.10`
 
-Supported Pytorch versions: `2.1.2`
+Supported Pytorch versions: `2.1.2`, `2.2.0`
 
 Supported Platforms: `NVIDIA CUDA`
 
