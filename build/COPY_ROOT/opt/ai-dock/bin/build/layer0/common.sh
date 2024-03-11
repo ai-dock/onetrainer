@@ -23,7 +23,9 @@ build_common_create_env() {
     exported_env=/tmp/${MAMBA_DEFAULT_ENV}.yaml
     micromamba env export -n ${MAMBA_DEFAULT_ENV} > "${exported_env}"
     $MAMBA_CREATE -n onetrainer --file "${exported_env}"
+    python_version="$(micromamba -n onetrainer run python -V | tail -n1 | awk '{print $2}' | cut -d '.' -f1,2)"
     printf "/opt/micromamba/envs/onetrainer/lib\n" >> /etc/ld.so.conf.d/x86_64-linux-gnu.micromamba.10-onetrainer.conf
+    printf "/opt/micromamba/envs/onetrainer/lib/python%s/site-packages/torch/lib/\n" "$python_version" >> /etc/ld.so.conf.d/x86_64-linux-gnu.micromamba.10-onetrainer.conf
 }
 
 
