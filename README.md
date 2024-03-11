@@ -4,7 +4,9 @@
 
 Run [OneTrainer](https://github.com/Nerogar/OneTrainer) in a docker container locally or in the cloud.
 
-These container images are tested extensively at [Vast.ai](https://link.ai-dock.org/template-vast-onetrainer-jupyter) & [Runpod.io](https://link.ai-dock.org/template-runpod-onetrainer-jupyter) but compatibility with other GPU cloud services is expected.
+This image is an extension of [Ai-Dock/Linux-Desktop](https://github.com/ai-dock/linux-desktop) with OneTrainer preinstalled for user convenience.
+
+These container images are tested extensively at [Vast.ai](https://link.ai-dock.org/template-vast-onetrainer) & [Runpod.io](https://link.ai-dock.org/template-runpod-onetrainer) but compatibility with other GPU cloud services is expected.
 
 >[!NOTE]
 >These images do not bundle models or third-party configurations. You should use a [provisioning script](#provisioning-script) to automatically configure your container. You can find examples in `config/provisioning`.
@@ -169,8 +171,6 @@ You can use the included `cloudflared` service to make secure connections withou
 | `GPU_COUNT`              | Limit the number of available GPUs |
 | `PROVISIONING_SCRIPT`    | URL of a remote script to execute on init. See [note](#provisioning-script). |
 | `RCLONE_*`               | Rclone configuration - See [rclone documentation](https://rclone.org/docs/#config-file) |
-| `SKIP_ACL`               | Set `true` to skip modifying workspace ACL |
-| `SSH_PORT_LOCAL`         | Set a non-standard port for SSH (default `22`) |
 | `USER_NAME`              | System account username (default `user`)|
 | `USER_PASSWORD`          | System account username (default `password`)|
 | `WEB_ENABLE_AUTH`        | Enable password protection for web services (default `true`) |
