@@ -45,8 +45,8 @@ Supported Platforms: `NVIDIA CUDA`
 
 | Variable                 | Description |
 | ------------------------ | ----------- |
-| `AUTO_UPDATE`            | Update ComfyUI on startup (default `true`) |
-| `ONETRAINER_BRANCH`      | OneTrainer branch/commit hash. Defaults to `master` |
+| `AUTO_UPDATE`            | Update OneTrainer on startup (default `true`) |
+| `ONETRAINER_BRANCH`      | OneTrainer branch/commit hash. (default `master`) |
 | `ONETRAINER_FLAGS`       | Startup flags. eg. `--generic-option1 --generic-option2` |
 
 See the base environment variables [here](https://github.com/ai-dock/base-image/wiki/2.0-Environment-Variables) for more configuration options.
